@@ -29,9 +29,9 @@ li {
   margin-left:10px;
 }
 #shipping li label {
- width:80px;
- float:left;
- text-align:left;     
+  width:80px;
+  float:left;
+  text-align:left;     
 }
 input[type="text"], input[type="tel"], input[type="email"] {
   width:300px;
