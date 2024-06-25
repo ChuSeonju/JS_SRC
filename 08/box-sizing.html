@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스 모델 너비 지정하기</title>
+  <style>
+    div {
+      margin-bottom: 20px;
+    }
+    .box1 {
+      border: 10px solid #ccc;
+      width: 200px; /* 고정 너비 */
+      height: 100px;
+      padding: 20px; 
+    }
+    .box2 {
+      box-sizing: border-box; /* 중요 */
+      border: 10px solid #00f;
+      width: 200px; /* 가변 너비 - 웹 브라우저의 50% */
+      height: 100px; 
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+</html>
