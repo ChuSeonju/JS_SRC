@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선형 그라데이션의 색상 중지점 사용</title>
+  <style>
+    div {
+      width: 500px;
+      height: 300px;
+      border-radius: 10px;
+    }
+    .grad {
+      background: #06f;
+      background: linear-gradient(to bottom, #06f, white 30%, #06f);
+    }                            /* 방향,  시작색상, 중지점의 색상과 위치, 끝 색상*/
+  </style>
+</head>
+<body>
+  <div class="grad"></div>
+</body>
+</html>

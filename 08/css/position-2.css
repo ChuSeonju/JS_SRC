@@ -4,14 +4,18 @@
   padding:0;
 }  
 #contents {
- background:url("../images/bg.jpg") no-repeat;
- background-size:cover;
- width:800px;
- height:500px;
- margin:0 auto;
+  background:url("../images/bg.jpg") no-repeat;
+  background-size:cover;
+  width:800px;
+  height:500px;
+  margin:0 auto;
+  position: relative;
 }
 h1 { 
   color:#fff; 
   font-size:120px;
   text-shadow: 2px 3px 0 #000;      
+  position: absolute; /* #content에서 relative로 지정하고 여기서 absolute를 썼기 때문에 #content를 기준으로 h1의 위치가 지정됨*/
+  right: 100px;
+  bottom: 100px;
 }

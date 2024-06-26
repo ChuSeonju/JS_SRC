@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li{
+  display: block;
+  padding: 10px 20px;
+  background-color: #ccc;
+  float: left;
+}

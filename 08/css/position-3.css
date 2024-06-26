@@ -4,12 +4,12 @@
   padding:0;
 }  
 #contents {
- background:url("../images/bg.jpg") no-repeat;
- background-size:cover;
- width:800px;
- height:500px;
- margin:0 auto;
- position:relative;
+  background:url("../images/bg.jpg") no-repeat;
+  background-size:cover;
+  width:800px;
+  height:500px;
+  margin:0 auto;
+  position:relative;
 }
 h1 { 
   color:#fff; 
