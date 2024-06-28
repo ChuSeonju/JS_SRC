@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+/*
+  변형 함수: 
+    transform: 
+      요소 이동 - translate(x, y)
+      확대 축소 - scale(x, y)
+      회전 - rotate(각도)
+      비틀기 - skew(x, y)
+      원근감 - perspective / 3차원 표현
+
+  트랜지션 속성
+    transition-property : 적용 속성
+    transition-duration : 실행 시간
+    transition-timing-function : 실행 형태
+    transition-delay : 지연 시간 ex. 3초 후에 실행
+    transition: 축약 속성
+
+  애니메이션 속성
+    @keyframes : 애니메이션이 바뀌는 지점 설정
+    animation-delay : 시작 시간 
+    animation-direction : 애니메이션 실행 방향
+    animation-duration : 실행 시간
+    animation-iteration-count : 반복 횟수
+    animation-name : 해당하는 keyframes 호출
+    animation-timing-function : 전환 형태 지정
+    animation :축약 속성
+*/
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 60px auto;
+      animation: rotate 3s infinite, background 3s infinite alternate; /* 정신 사나움 ㅋㅋ */
+    }
+    @keyframes rotate {
+      from {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      } 50% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+      } to {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+      }
+    }
+    @keyframes background {
+      from {
+        background-color: red;
+      } 50% {
+        background-color: green;
+      } to {
+        background-color: blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
