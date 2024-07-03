@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>var 문제점 - 재선언</title>
+</head>
+<body>
+  <h1>콘솔을 확인하세요</h1>
+  <script>
+    function addNumber(num1, num2) {
+      return num1 + num2;
+    }
+    var sum = addNumber(10, 20);
+    console.log(sum); // 30
+    sum = 50; // 재할당
+
+    console.log(sum); // 50
+    var sum = 100; // 재선언 
+
+    console.log(sum); // 100
+    // 3. var 변수의 문제점 재선언 가능 - 오류 발생 가능성 
+    // 같은 이름으로 선언 하는게 가능해서 재선언이 됨 그래서 호출 할때마다 값이 바뀌노 ㅋ
+    // var 말고 let으로 하면 재선언도
+  </script>
+</body>
+</html>
