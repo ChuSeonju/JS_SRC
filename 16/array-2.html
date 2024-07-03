@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장객체 - 배열</title>
+  <style>
+    body {
+      font-size: 2em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>배열의 각 요소</h1>
+  <script>
+    var numbers = ["one", "two", "three", "four"];
+
+    for(let i = 0; i < numbers.length; i++) {
+      document.write("<p>" + numbers[i] + "</p>"); // <p>로 해서 블록레벨 되니까 세로로 출력/ 인라인 하려면 span 쓰면 되것제
+    }
+
+    console.log(typeof numbers); // object /객체
+  </script>
+</body>
+</html>

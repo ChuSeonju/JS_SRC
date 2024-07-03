@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공부 챌린지</title>
+  <style>
+    #container {
+      margin: 50px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 2px double #222;
+      background-color: #d8f0fc;
+      text-align: center;
+    }
+    .accent {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1><br>풀스택 과정 <br>공부일</h1>
+    <p><span class="accent" id="result"></span> 일 연속으로 <br>
+    공부를 하고있군요.</p>
+    <p>축하합니다!</p> <!-- 뭘 축하혀요.. -->
+  </div>
+  <script>
+    var goToHome = new Date("2024-07-03, 18:30:00"); // 시작 날짜
+    var now = new Date();
+
+    var home = 
+
+
+    now.setTime(goToHome.getTime());
+
+    console.log(now);
+
+    var transTime = 5 * 60 * 1000;
+    now.setTime(now.getTime() + transTime);
+    console.log(now);
+
+    const event = new Date('2024-07-03 23:15:30');
+    console.log(event.toLocaleString());
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 2</title>
+</head>
+<body>
+  
+  <script>
+    // 두 수 비교해서 더 큰 숫자 출력
+    
+    function compareTwo(x, y) {
+      if(x < y) {
+        msg = y + "(이)가 " + x + "보다 큽니다.";
+      }else if(x > y) {
+        msg = x + "(이)가 " + y + "보다 큽니다.";
+      }else {
+        msg = "두 수는 같습니다.";
+      }
+      return alert(msg);
+    }
+    
+    var n1 = parseInt(prompt("비교할 첫 번째 숫자 : "));
+    var n2 = parseInt(prompt("비교할 두 번째 숫자 : "));
+
+    compareTwo(n1, n2);
+  </script>
+</body>
+</html>

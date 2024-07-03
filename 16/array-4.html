@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 객체의 메서드 - splice</title>
+</head>
+<body>
+  <p>splice 메서드 사용하기</p>
+  <script>
+    // 인수가 1개일 경우
+    var numbers = [1, 2, 3, 4, 5];
+    var newNumbers = numbers.splice(2); // 2번 인덱스부터 마지막까지 삭제?
+    document.write("(반환된 배열)삭제된 요소 : " + newNumbers + "<br>"); 
+    document.write("(변경된 배열)splice된 numbers :" + numbers + "<br>"); // 애도 기존 배열이 바뀌네?
+    document.write("<hr>");
+
+    // 인수가 2개일 경우
+    var study = ["html", "css", "javascript", "jsp"];
+    var newStudy = study.splice(2, 1); // 2번 인덱스부터 1개만 삭제
+    document.write("반환된 배열 : " + newStudy + "<br>");
+    document.write("변경된 배열 : " + study + "<br>");
+    document.write("<hr>");
+
+    // 인수가 3개일 경우 [ html,css,jsp ]
+    var newStudy2 = study.splice(2, 1, 'js'); // 2번 인덱스부터 1개 삭제 되고 그 위치에 js가 추가됨
+    // var newStudy2 = study.splice(2, 0, 'js'); // 이렇게 하면 2번 인덱스 자리에 js 추가 되고 삭제되는 건 없음 /[ html,css,js,jsp ]
+    document.write("반환된 배열 : " + newStudy2 + "<br>");
+    document.write("변경된 배열 : " + study + "<br>");
+    document.write("<hr>");
+
+    // splice 리턴값은 삭제값
+    // 원본 배열은 변경 /두번째 파라미터에 따라 추가될 수도, 변경될 수도 있음
+  </script>
+</body>
+</html>

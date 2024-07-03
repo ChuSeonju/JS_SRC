@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array 객체의 메서드 - slice</title>
+</head>
+<body>
+  <p>slice 메서드 사용하기</p>
+  <script>
+    // slice : 추출한 요소로 배열 만듦, 기존 배열 변경 안됨
+    var colors = ["red", "green", "blue", "white", "black"];
+
+    // 인수 1개
+    var colors2 = colors.slice(2); // 2번 인덱스부터 끝까지 새로운 배열로 리턴
+    document.write("colors2 : " + colors2 + "<br>");
+    document.write("colors : " + colors + "<br>"); // 원본 그대로
+    document.write("<hr>");
+
+    // 인수 2개
+    var colors3 = colors.slice(2, 4); // 2번 인덱스부터 4번 이전까지
+    document.write("colors3 : " + colors3 + "<br>");
+    document.write("colors : " + colors + "<br>"); // 원본 그대로
+    document.write("<hr>");
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공부 챌린지</title>
+  <style>
+    #container {
+      margin: 50px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 2px double #222;
+      background-color: #d8f0fc;
+      text-align: center;
+    }
+    .accent {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1><br>풀스택 과정 <br>종료일</h1>
+    <p><span class="accent" id="result"></span> 일 동안 <br>
+    공부하세요.</p>
+    <p>힘내시던가!</p> <!-- 뭘 축하혀요.. -->
+  </div>
+  <script>
+    var now = new Date();
+    var lastDay = new Date("2024-10-22"); // 시작 날짜
+
+    var toNow = now.getTime();
+    var toLast = lastDay.getTime();
+
+    var passedTime = toLast - toNow;
+    // ms 단위를 일수로 계산하고, 반올림
+    var passedDay = Math.round(passedTime/(1000*60*60*24));
+
+    document.querySelector('#result').innerText = passedDay;
+
+  </script>
+</body>
+</html>
