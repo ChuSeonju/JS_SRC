@@ -22,20 +22,20 @@
   </div>
 
   <script>
-    function displayTime(win='pop', w=400, h=200){        
-      // 윈도우 너비 시작점
+    function displayTime(win='pop', w=400, h=200) {
+      //윈도우 너비 시작점
       var screenLeft = window.screenLeft || window.screenX;
-      // 윈도우 높이 시작점
-      var screenRight = window.screenRight || window.screenY;
+      //윈도우 높이 시작점
+      var screenTop = window.screenTop || window.screenY;
 
-      // 팝업을 띄우는 부모 윈도우의 너비와 높이가 기준
+      // 팝업을 띄우는 부모 윈도우의 너비 높이 기준
       var screenWidth = window.innerWidth || document.documentElement.clientWidth;
-      var screenHeight = window.innerHeight || document.documentElement.clientHeight;
-      
-      var left = screenLeft + (screenWidth - w) / 2;
-      var top = screenRight + (screenHeight - h) / 2;
-      var opt = 'width' + w + ', height=' + h + ', top=' + top + ', left' + left;
+      var screenHeight = window.innerHeight || document.documentElement.clientHeight; 
 
+      var left = screenLeft + (screenWidth - w) / 2;
+      var top = screenTop + (screenHeight - h) / 2;
+      var opt = 'width=' + w + ', height=' + h + ', top=' + top + ', left=' + left;
+      
       window.open("current.html", win, opt);
     }
     document.querySelector('#bttn').onclick = displayTime;
