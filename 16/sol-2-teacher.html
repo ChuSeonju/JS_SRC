@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 2</title>
+  <style>
+    #container{
+      width: 200px;
+      margin:50px auto;
+    }
+    button {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 20px 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <button id="bttn">현재 시간 보기</button>
+  </div>
+
+  <script>
+    function displayTime(win='pop', w=400, h=200){        
+      // 윈도우 너비 시작점
+      var screenLeft = window.screenLeft || window.screenX;
+      // 윈도우 높이 시작점
+      var screenRight = window.screenRight || window.screenY;
+
+      // 팝업을 띄우는 부모 윈도우의 너비와 높이가 기준
+      var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+      var screenHeight = window.innerHeight || document.documentElement.clientHeight;
+      
+      var left = screenLeft + (screenWidth - w) / 2;
+      var top = screenRight + (screenHeight - h) / 2;
+      var opt = 'width' + w + ', height=' + h + ', top=' + top + ', left' + left;
+
+      window.open("current.html", win, opt);
+    }
+    document.querySelector('#bttn').onclick = displayTime;
+
+  </script>
+</body>
+</html>

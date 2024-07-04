@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I want to go home,,</title>
+  <style>
+    #container {
+      margin: 50px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 2px double #222;
+      background-color: #d8f0fc;
+      text-align: center;
+      
+    }
+    .accent {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: red;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <br><br><br><br>
+    <h2>오후 6시 30분까지</h2>
+    <p><span class="accent" id="result"></span><br>
+    남았습니다!</p>
+  </div>
+  <script>
+    setInterval(goToHome, 1000)
+    function goToHome(){
+      var now = new Date();
+      var hours, minutes;
+
+      if(now.getMinutes() <= 30 ){
+        hours = 18 - now.getHours();
+        minutes = 30 - now.getMinutes();
+      }else {
+        hours = 17 - now.getHours();
+        minutes = 90 - now.getMinutes();
+      }
+      document.querySelector('#result').innerText = hours + "시간 " + minutes + "분";
+    }
+    // goToHome();
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I want to go home,,</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <style>
+    #container {
+      margin: 20px auto;
+      width: 250px;
+      height: 180px;
+      border-radius: 25px;
+      border: 2px double #222;
+      background: blue;
+      background: linear-gradient(to right bottom, #ceebfa, rgb(252, 204, 237));
+      text-align: center;
+      font-family: "Jua", sans-serif;
+      font-weight: lighter;
+      font-style: normal;
+    }
+    .accent {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: rgb(65, 10, 138);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>퇴근까지</h2>
+    <p><span class="accent" id="result"></span><br>
+    남았습니다!<br>빨리가서 제삼 산책하세요.</p>
+  </div>
+  <script>
+    setInterval(goToHome, 1000)
+    var wHours = prompt("퇴근 예상 시간을 입력하세요.(24시 형식)", "18");
+    var wMinutes = prompt("퇴근 예상 시간의 분을 입력하세요.", "30");
+
+    function goToHome(){
+      var now = new Date();
+      var hours, minutes;
+        if(now.getMinutes() <= wMinutes ){
+          hours = wHours - now.getHours()
+          minutes = wMinutes - now.getMinutes()     
+        }else {
+          hours = (wHours-1) - now.getHours()
+          minutes = (60-((wMinutes - now.getMinutes()) * -1))
+        }
+      document.querySelector('#result').innerText = hours + "시간 " + minutes + "분";
+    }
+  </script>
+</body>
+</html>
