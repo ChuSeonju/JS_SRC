@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당첨자 발표-자바스크립트 포함</title>
+  <style>
+    h1 {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>당첨자 발표</h1>
+  <script>
+    // var seed = prompt("전체 응모자 수 : ", "0");
+    var chars = ["선주", "진욱", "민진", "다은", "희재"] ;
+    var winner = prompt("당첨자 : ", "1");
+
+    document.write("전체 응모자 명단 : " + chars + ", <br>");
+    document.write("당첨자 : ");
+
+    for(let i = 0; i < winner; i++) {
+      var picked = Math.random() * chars + 1;
+      document.write(picked);  /* 마지막에도 쉼표 나옴 */
+    }
+  </script>
+</body>
+</html>

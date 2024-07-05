@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM event 객체</title>
+  <style>
+    #container {
+      width: 300px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img src="images/cup-1.png" alt="컵이미지" id="cup">
+  </div>
+  <script>
+    // 이미지 누르면 다른 이미지로 바뀜
+    var cup = document.querySelector("#cup");
+    cup.onclick = function(event) { // 함수 이름 사용해서 연결한 걸 익명함수로. event 객체를 받아서
+      alert("이벤트 유형: " + event.type);
+      alert("이벤트 발생 위치: " + event.pageX + ", " + event.pageY);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Programming</title>
+  <link rel="stylesheet" href="css/nodelist.css">
+
+</head>
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <p>공부가 끝난 것은 클릭해서 삭제 할 수 있습니다.</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button onclick="newRegister(); return false;">추가</button>
+    </form>
+    <hr>
+    <ul id="itemList"></ul>
+  </div>
+  <script>
+    function newRegister(){
+      var newItem = document.createElement("li"); // li 요소인 노드를 만들어서 newItem 변수에 넣음
+      var subject = document.querySelector("#subject"); // input 태그 자리에 subject를 넣어준다.. 는 정도로 이해하고 잇음,,
+      var newText = document.createTextNode(subject.value); // text 타입인 input태그에 입력 받은 값이 value. newText라는 변수에 새로운 텍스트 노드를 만들어서 넣음
+      newItem.appendChild(newText);  // newItem노드에 newText 노드를 자식 노드로/<li>자바</li>
+
+      var itemList = document.querySelector("#itemList"); // 이것도.. #itemList 자리 = itemList...?
+      //itemList.appendChild(newItem); // 새로 만든 요소노드를 부모노드에 추가/ 그니까 입력받은 값은 저장한 노드가 itemList가 되서 ul 자리에서 나올 수 있는 거지
+      
+      // 앞쪽에 최근 정보 쌓이도록
+      itemList.insertBefore(newItem, itemList.childNodes[0]); 
+      subject.value = "";
+
+      var items = document.querySelectorAll("li"); // li 요소 다 들고 오기(모든 공부 요소)
+      for(let i=0; i < items.length; i++){ // items 노드 길이만큼 for문 돌림 
+        items[i].addEventListener("click", function(){ // 클릭했을 때
+          if(this.parentNode) { // 부모 노드가 있다면
+            this.parentNode.removeChild(this); // 부모노드에서 자식노드 삭제
+            // alert(this); // (지금 this 정보 확인)
+          }
+        });
+
+        // 화살표 함수 내부에서 this 사용 시 유의
+        // items[i].addEventListener("click", () => {
+        //   if(this.parentNode) { // 부모 노드가 있다면
+        //     alert(this);
+        //     // this.parentNode.removeChild(this);
+        //   }
+        // });
+      }
+    }
+
+  </script>
+
+
+</body>
+</html>

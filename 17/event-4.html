@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM event 객체</title>
+  <style>
+    #container {
+      width: 300px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img src="images/cup-1.png" alt="컵이미지" id="cup">
+  </div>
+  <script>
+    // 이미지 누르면 다른 이미지로 바뀜
+    var cup = document.querySelector("#cup");
+    cup.onclick = function(event) { 
+      alert("클릭한 이미지 파일: " + this.src); // #cup에 있는 이미지 파일 경로 알 수 있음
+    }
+  </script>
+</body>
+</html>
