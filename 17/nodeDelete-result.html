@@ -27,7 +27,7 @@
       newItem.appendChild(newText);  // newItem노드에 newText 노드를 자식 노드로/<li>자바</li>
 
       var itemList = document.querySelector("#itemList"); // 이것도.. #itemList 자리 = itemList...?
-      //itemList.appendChild(newItem); // 새로 만든 요소노드를 부모노드에 추가/ 그니까 입력받은 값은 저장한 노드가 itemList가 되서 ul 자리에서 나올 수 있는 거지
+      //itemList.appendChild(newItem); // 새로 만든 요소노드를 부모노드에 추가/ 그니까 입력받은 값은 저장한 노드가 itemList가 돼서 ul 자리에서 나올 수 있는 거지
       
       // 앞쪽에 최근 정보 쌓이도록
       itemList.insertBefore(newItem, itemList.childNodes[0]); 
