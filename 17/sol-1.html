@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>연습문제 1</title>
-	<style>
-		ul{
-			list-style: none;
-		}
-		li {
-			font-size:20px; 
-			line-height: 35px;
-		}
-		.check {			
-			color:#ccc;
-			font-size:20px;
-			margin-right:25px;
-		}
-		.check:hover {
-			color:#222;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 1</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+    li {
+      font-size: 20px;
+      line-height: 35px;
+    }
+    .check {
+      color: #999;
+      font-size: 20px;
+      margin-right: 25px;
+    }
+  </style>
 </head>
 <body>
-	<h1>할 일 목록</h1>
-	<ul>
-		<li><span class="check">&check;</span>할 일 1 </li>
-		<li><span class="check">&check;</span>할 일 2 </li>
-		<li><span class="check">&check;</span>할 일 3 </li>
-		<li><span class="check">&check;</span>할 일 4 </li>
-		<li><span class="check">&check;</span>할 일 5 </li>
-	</ul>
+  <h1>할 일 목록</h1>
+  <ul>
+    <li><span class="check">&check;</span>할 일 1</li>
+    <li><span class="check">&check;</span>할 일 2</li>
+    <li><span class="check">&check;</span>할 일 3</li>
+    <li><span class="check">&check;</span>할 일 4</li>
+    <li><span class="check">&check;</span>할 일 5</li>
+  </ul>
   <script>
-		var checks = document.querySelectorAll(".check"); // .check인 객체? 요소? 들 = checks / 아니 이게 맞냐고요
-		for(var i = 0; i < checks.length; i++) {  // checks의 갯수 만큼 반복문 돌림
-			checks[i].addEventListener("click", function() { // i번의 checks 를 클릭했을 때 스타일들이 바뀜
-        this.style.color = "#ccc";
-				this.parentNode.style.color = "#ccc";
-				this.parentNode.style.textDecoration="line-through";
-			});
-		}
-	</script>
+    // 여기에 코드 작성
+    const checking = document.querySelectorAll('.check'); // 노드 리스트
+    checking.forEach((el) => {
+      el.addEventListener("click", function(){
+        this.style.color = '#ccc';
+        this.parentNode.style.color = '#ccc';
+        this.parentNode.style.textDecoration = 'line-through';
+      });
+    });
+  </script>
 </body>
 </html>

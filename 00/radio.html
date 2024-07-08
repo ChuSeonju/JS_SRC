@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>radio</title>
+</head>
+<body>
+  <form action=""> 
+    <label><input type="radio" name="fruits" value="apple" checked>사과</label>
+    <label><input type="radio" name="fruits" value="banana">바나나</label>
+    <label><input type="radio" name="fruits" value="orange">오렌지</label>
+    <label><input type="radio" name="fruits" value="melon">멜론</label>
+  </form>
+  <script>
+    const inputEls = document.querySelectorAll("input[type='radio']"); // 속성 선택자
+    inputEls.forEach((el)=>{
+      if(el.checked){
+        console.log(el.value); // checked인 요소만
+      }
+    })
+  </script>
+</body>
+</html>

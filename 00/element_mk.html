@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>요소 생성</title>
+</head>
+<body>
+  <h1>요소 생성</h1>
+  <p>Hello</p>
+  <p>Javascript</p>
+  <script>
+    // <a href="https://www.ikosmo.co.kr/main">링크</a>
+    const aE1 = document.createElement("a"); // a 요소만 만들어짐
+    const textNode = document.createTextNode("링크"); // 텍스트 노드 생성
+    const hrefAttr = document.createAttribute("href"); // 속성 만들기
+
+    hrefAttr.value = "https://www.ikosmo.co.kr/main"; // value 연결
+
+    aE1.setAttributeNode(hrefAttr); // aE1에다가 hrefAttr 속성 넣어줌
+    aE1.appendChild(textNode); // textNode도 업어줌
+    document.body.appendChild(aE1); // body에 aE1 보이도록 또 업음
+
+    // 요소 삭제
+    // const hE1 = document.querySelector("h1"); // h1 요소 객체화?
+    // hE1.parentNode.removeChild(hE1); // h1의 부모는 body이고 요소를 지우려면 부모로부터 지워야하니까
+
+    // const pE1 = document.querySelectorAll("p"); // 노드 리스트
+    // pE1.forEach(el => {
+    //   el.parentNode.removeChild(el); // p 요소 삭제
+    // }); // 리스트의 모든 요소에 함수 실행
+
+    const childNodes = document.body.childNodes; // text는 줄바꾼 엔터
+    childNodes.forEach((node)=>{
+      console.log(node.nodeName);
+      if(node.nodeName === 'P'){
+        node.parentNode.removeChild(node);
+      }
+    });
+  </script>
+</body>
+</html>

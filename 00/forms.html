@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forms</title>
+</head>
+<body>
+  <form name="frm1">
+    <input type="text">
+  </form>
+  <form name="frm2">
+    <input type="text">
+  </form>
+  <form name="frm3">
+    <input type="text">
+  </form>
+
+  <script>
+    // const formEls = document.querySelectorAll('form');
+    // console.log(formEls); // 노드리스트
+
+    // const formEls = document.forms;
+    // console.log(formEls); // HTMLCollection
+
+    const frm = document.frm3; // 이름으로 접근 가능
+    console.log(frm);
+  </script>
+</body>
+</html>

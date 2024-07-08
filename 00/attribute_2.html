@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>atttribute</title>
+  <style>
+    .red { color: red; }
+    .fz20{ font-size: 20px; }
+  </style>
+</head>
+<body>
+  <a href="https://www.ikosmo.co.kr/main" class="fz20">코스모</a>
+  <script>
+    const aE1 = document.querySelector("a");
+    aE1.setAttribute("class", "red"); // (속성명, 값) /replace (변경)
+
+    // aE1.classList.add('red'); // 추가
+  </script>
+</body>
+</html>

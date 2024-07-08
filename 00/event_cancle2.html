@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event cancle</title>
+</head>
+<body>
+  <a href="http://www.naver.com">메뉴 1</a> | 
+  <a href="http://www.naver.com">메뉴 2</a>
+  <script>
+    const aEls = document.querySelectorAll('a');
+
+    aEls.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault()});
+    });
+  </script>
+</body>
+</html>

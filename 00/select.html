@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>select</title>
+</head>
+<body>
+  <form action="">
+    <select name="" id="">
+      <option value="apple">사과</option>
+      <option value="banana" selected>바나나</option>
+      <option value="orange">오렌지</option>
+      <option value="melon">멜론</option>
+    </select>
+  </form>
+  <script>
+    const optionEls = document.forms[0].elements[0].children; // [0] 빼면 오류남. document 해서 객체화햇기에 값이 하나더라도 인덱스 값 써줘야함
+    // const optionEls = document.querySelectorAll("option"); // 이래저래 가져오는 방법 다양
+    // optionEls.forEach(function(el){
+    //   // console.log(el); // 다 불러옴
+    //   if(el.selected){
+    //     console.log(el.value); // selected인 애 value만
+    //   }
+    // });
+
+    // Array.prototype.forEach.call(optionEls, (el) => { //call 엮어서 가져와야혀
+    //   if(el.selected){
+    //     console.log(el.value);
+    //   };
+    // });
+
+    Array.prototype.forEach.call(optionEls, (el) => {
+      if(el.value === 'orange'){
+        el.selected = true;
+      }
+    });
+
+  </script>
+</body>
+</html>

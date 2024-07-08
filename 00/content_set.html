@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Modify Set</title>
+</head>
+<body>
+  <p id="textContent">hello, </p>
+  <p id="innerText">hello, </p>
+  <p id="innerHTML"></p>
+  <script>
+    document.querySelector('#textContent').textContent += 
+        '<strong> hello, world</strong>';  // 텍스트도 복합대입연산자 쓸 수 잇군
+    document.querySelector('#innerText').innerText += 
+        '<strong> hello, world</strong>'; 
+    document.querySelector('#innerHTML').innerHTML += 
+        '<strong> hello, world</strong>'; 
+  </script>
+</body>
+</html>

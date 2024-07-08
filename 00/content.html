@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠 조작</title>
+</head>
+<body>
+  <p id="title">Hello, <span style="display: none;">Javascript!</span></p>
+  <script>
+    const pE1 = document.getElementsByTagName('p')[0]; // 0번째 요소 가져옴 
+    console.log(pE1.textContent); // content 내용 전부 출력 /Hello, Javascript!
+    console.log(pE1.innerText); // 화면에 보이는 것만 출력 /Hello,
+    console.log(pE1.innerHTML); // 내용부 html 다 보여줌 /Hello, <span style="display: none;">Javascript!</span>
+  </script>
+</body>
+</html>

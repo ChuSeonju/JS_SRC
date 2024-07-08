@@ -14,7 +14,7 @@
     <p>공부가 끝난 것은 클릭해서 삭제 할 수 있습니다.</p>
     <form action="">
       <input type="text" id="subject" autofocus>
-      <button onclick="newRegister(); return false;">추가</button>
+      <button onclick="newRegister(); return false;">추가</button> <!-- retrun false : 버튼의 기본 기능인 submit 역할을 취소하기 위한 것. 취소 안 하면 함수를 실행하지 않고 기본 기능 먼저 실행 -->
     </form>
     <hr>
     <ul id="itemList"></ul>
