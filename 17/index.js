@@ -1,4 +1,6 @@
-const flagBlue = document.querySelector(".flag-blue");
+document.addEventListener("DOMContentLoaded", function(){
+
+  const flagBlue = document.querySelector(".flag-blue");
 const flagWhite = document.querySelector(".flag-white");
 
 function reset() {
@@ -25,3 +27,7 @@ document.addEventListener('contextmenu', function(event){
 
 // 테스트 코드
 document.addEventListener("mousedown", flagUp)
+
+
+});
+

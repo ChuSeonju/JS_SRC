@@ -1,0 +1,12 @@
+#container {
+  width: 1200px;
+  text-align: center;
+}
+
+#midImg {
+  margin: 0 30px;
+}
+
+#text {
+  margin: 100px;
+}
