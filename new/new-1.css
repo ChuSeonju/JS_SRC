@@ -1,105 +1,86 @@
-/* 일단 막 갖다 붙여 쓴 거~~~ */
-
 * {
-  margin:0;   /* 마진 리셋 */
-  padding:0;   /* 패딩 리셋 */
+  margin: 0;   /* 마진 리셋 */
+  padding: 0;   /* 패딩 리셋 */
   box-sizing: border-box;   /* 박스 영역은 테두리까지 */ 
 }
 
-a {
-  text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
-}
-ul {
-  list-style: none;
-}
-
 #container {
-  margin: 0 auto;  /* 화면 중앙에 배치 */
-  width: 900px;    /* 너비 */    
-  background-color: #fff;
+  margin: 10px auto;  /* 화면 중앙에 배치 */
+  width: 1200px;    /* 너비 */    
 }
 
-header{
-  display: inline;
-  width:100%;    /*  너비 */
-  height:100px;   /* 높이 */ 
-  background-color:#045;  
+
+/*       헤더>로고+nav        */
+#header{
+  display: flex; /* 각각 블록요소인 로고 이미지와 nav 메뉴를 나란히 */
+  /* justify-content: space-between; */
+  align-items: center; /* 안 써주니 로고 이미지가 위로 감ㅠ */
+  border-bottom: 1px solid #222; /* hr 태그 말고 선 그어주기 위해 */
+  padding-bottom: 10px; /* container의 margin 때문에 뭔가 정렬이 안돼서 추가 */
 }
 
-/* 로고 */
-#logo{ 
-  float:left;   /* 왼쪽으로 플로팅 */ 
-  width:2px;   /*  너비 */ 
-  height:100px;   /* 높이 */
-  line-height:100px;  /* 세로로 중간에 맞춤 - 줄간격을 높이 값과 같게 */
-  padding-left:20px;  /* 왼쪽에 여백 */
-}
 #logo img {
-  float:left;   /* 왼쪽으로 플로팅 */ 
-  width: 200px;
-  height: 100px;
-  padding-top: 35px;
+  width: 80%;
+  max-height: 100px;
 }
 
-/* 내비게이션 */
-nav{  
-  float:right;   /* 오른쪽으로 플로팅 */
-  width:900px;   /*   너비 */  
-  height:100px;   /* 메뉴 영역 높이 */  
-  /* padding-top:40px;  메뉴를 아래로 내리기 위해   */
+nav {  
+  float: right;   /* 오른쪽으로 */
+  width: 900px;   /* 플로팅을 해줬는데 왜 가운데로 가버릴까,, */  
+  /* height: 100px;   메뉴 영역 높이   */
 }
-#topMenu {  
-  height:60px; 
-}
-#topMenu > li {
-  float:right;  /* 메뉴 항목을 왼쪽으로 플로팅 */ 
-  position: relative;  
-}
-#topMenu > li > a {
-  display:block;  /* 링크 텍스트는 블록으로 */ 
-  font-size:1.1em;
-  color:#fff;  /* 글자 색 */
-  font-weight:600;  /* 글자 굵기 */
-  padding:20px 60px;  /* 패딩 */ 
-}
-#topMenu > li > a:hover {
-  color:#1fa8f8;
-  text-shadow:0 -2px #222;
+
+#navtop {
+  padding: 30px; /* 애도 자꾸 위로 붙음,, */
 }
 
 
+/*             헤더 아래 텍스트            */
+#text {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 1.4em;
+}
 
-/* 중간 이미지 */
+
+/*           가게 내부 사진, 표            */
 #midImg {
-  padding: 300px 400px 80px 100px;
+  display: flex; /* 이미지와 표 정렬 위함 */
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 50px 100px 100px 0; /* 원하는 위치로 이동 시키기 위해 패딩 조정 */
 }
+
+#image-container {
+  margin-right: 130px; /* 이미지와 텍스트 사이의 간격 */
+}
+
+#info {
+  /* flex: 1; */
+  margin-top: 200px; /* 표를 아래쪽으로 이동 시키기 위함 */
+}
+
 #pic { 			
-  box-shadow:1px 1px 2px #eee;
-  outline:1px dashed #ccc;			
+  box-shadow: 1px 1px 2px #eee;
+  outline: 1px dashed #ccc;			
   outline-offset: -7px;
 }
+
 #small-pic {
-  margin-top:20px;
+  margin-top: 20px;
   list-style: none;
-  padding:0;			
+  padding: 0;
 }
-.small {
-  width:60px;
-  height:60px;
+
+.small { 
+  width: 70px;
+  height: 70px;
 }
+
 #small-pic img:hover {
-  cursor:pointer;
+  cursor: pointer; /* 작은 이미지에 커서 올리면 포인터 바뀜 */
 }
 
-/* 중간 텍스트 */
-#middle {
-  display: flex;
-}
-
-/* 표 */
-table {
-  margin: 0px 30px;
-}
 table, th, td {
   border:1px solid #222;  /* 표 테두리 */
   border-collapse: collapse;  /* 테두리 1줄만 표시 */
@@ -111,30 +92,41 @@ th, td {
   padding:10px;  /* 셀 안쪽의 여백(패딩) */
 }
 
-/* 푸터 */
+
+/*             푸터              */
+a { text-decoration: none;  /* 텍스트 링크 밑줄 없애기  */ }
+ul { list-style: none; }
+footer ul li a { color: #666; }
+
 footer{   
-  margin: 80px auto;
-  width:1200px;   /* 너비 */
-  height:100px;  /* 높이 */
-  border-top:2px solid #222;
-}
-#bottomMenu{
+  margin: 50px auto;
+  padding: 25px 0 30px 0;
+  border-top: 1px solid #222;
   width:100%;
   height:20px;
-  margin-left:60px;
 }
-#bottomMenu ul {
-  margin-top:15px;  
+
+#bottomMenu ul li {
+  float: right;  /* 가로로 배치 */ 
+  padding: 5px 20px; /* li 간 여백 */
 }
-#bottomMenu ul li{
-  float:left;  /* 가로로 배치 */ 
-  padding:5px 20px;
-  border-right:1px solid #ddd;   /* 항목 오른쪽에 테두리 */ 
+
+/* 메뉴 소개  */
+#menuImg {
+  margin-bottom: 100px;
 }
-#bottomMenu ul li:last-child{
-  border:none;  /* 마지막 항목에는 오른쪽 테두리 없음 */  
-}
-#bottomMenu ul li a, #bottomMenu ul li a:visited {  
-  font-size:15px;  /* 글자 크기 */ 
-  color:#666;   /* 글자 색 */ 
+
+#container2 {
+  display: flex;
+  padding: 40px 0 20px 20px;
+  width: 1000px;      
+} 
+
+#container2 p {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  font-size: 0.8em;
+  color: #ccc;
 }
